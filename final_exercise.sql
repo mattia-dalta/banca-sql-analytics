@@ -9,7 +9,7 @@ select
     -- customer's age
     -- Calculate customer's age as the difference between current date and birth date.
     -- Since we group by id_cliente and each customer has only one birth date,
-    -- using MAX() ensures syntactical correctness without altering the result. It's just becouse i want to use only client_id column for the group by
+    -- using MAX() ensures syntactical correctness without altering the result. It's just because i want to use only client_id column for the group by
     -- It returns the correct age for each unique customer.
     
     max(timestampdiff(year, cl.data_nascita, current_date())) as eta,             
